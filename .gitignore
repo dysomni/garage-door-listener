@@ -1,0 +1,4 @@
+.history/
+.env
+*.log
+test.py
