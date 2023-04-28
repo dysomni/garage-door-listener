@@ -7,7 +7,7 @@ import urllib3
 
 sqs = boto3.client("sqs")
 queue_url = os.environ.get("SQS_QUEUE_URL")
-timeout = urllib3.Timeout(connect=2.0, read=7.0)
+timeout = urllib3.Timeout(total=5.0)
 http = urllib3.PoolManager(timeout=timeout)
 pushcut_request_url = os.environ.get("PUSHCUT_REQUEST_URL")
 
