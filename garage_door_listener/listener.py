@@ -109,7 +109,7 @@ def lambda_handler(event, context):
                 print(e)
                 return {"statusCode": 500, "body": str(e)}
             print(e)
-            return {"statusCode": 500, "body": str(e)}
+            return {"statusCode": 200, "body": str(e)}
 
         print("success")
         return {"statusCode": 200, "body": json.dumps(response)}
